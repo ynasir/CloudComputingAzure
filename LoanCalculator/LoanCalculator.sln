@@ -5,11 +5,13 @@ VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoanCalculator", "LoanCalculator.csproj", "{BC170C01-A788-4BFA-90BF-E149F8F8DD61}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MortgageCalcHelperLibrary", "..\MortgageCalcHelperLibrary\MortgageCalcHelperLibrary.csproj", "{5CAF2622-6F51-49B3-9A84-ED1AE51DD27C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MortgageCalcHelperLibrary", "..\MortgageCalcHelperLibrary\MortgageCalcHelperLibrary.csproj", "{5CAF2622-6F51-49B3-9A84-ED1AE51DD27C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebJobsSDKSample", "..\WebJobsSDKSample\WebJobsSDKSample.csproj", "{78F380E8-A3A3-4EF9-9FA4-99732FA353BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebJobsSDKSample", "..\WebJobsSDKSample\WebJobsSDKSample.csproj", "{78F380E8-A3A3-4EF9-9FA4-99732FA353BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject", "..\UnitTestProject\UnitTestProject.csproj", "{F6D92218-202C-4D53-BDEF-AB9CE35BCD5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTestProject", "..\UnitTestProject\UnitTestProject.csproj", "{F6D92218-202C-4D53-BDEF-AB9CE35BCD5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MortgageHelperClassLibrary", "..\MortgageHelperClassLibrary\MortgageHelperClassLibrary.csproj", "{669A1D1B-AAC8-4FF3-93EE-B98B5A81FB37}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{F6D92218-202C-4D53-BDEF-AB9CE35BCD5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6D92218-202C-4D53-BDEF-AB9CE35BCD5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6D92218-202C-4D53-BDEF-AB9CE35BCD5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{669A1D1B-AAC8-4FF3-93EE-B98B5A81FB37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{669A1D1B-AAC8-4FF3-93EE-B98B5A81FB37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{669A1D1B-AAC8-4FF3-93EE-B98B5A81FB37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{669A1D1B-AAC8-4FF3-93EE-B98B5A81FB37}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

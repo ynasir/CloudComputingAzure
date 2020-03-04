@@ -1,8 +1,7 @@
 ﻿using Microsoft.Azure.WebJobs;
 using Microsoft.Extensions.Logging;
 using Microsoft.WindowsAzure.Storage.Table;
-using MortgageCalcHelperLibrary;
-using Newtonsoft.Json;
+using MortgageHelperClassLibrary;
 using System;
 
 namespace WebJobsSDKSample
@@ -37,7 +36,8 @@ namespace WebJobsSDKSample
         {
             logger.LogInformation("Deserializing data");
 
-            MortgageModel data = JsonConvert.DeserializeObject<MortgageModel>(message);
+            MortgageSerializer mortgageSerializer = new MortgageSerializer();
+            MortgageModel data = mortgageSerializer.Deserialize(message);
 
             double monthlyPayment = MortgageCalcHelper.ComputeMonthlyPayment(
                 Convert.ToDouble(data.Principal),

@@ -4,7 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Queue;
-using MortgageCalcHelperLibrary;
+using MortgageHelperClassLibrary;
 using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
 
@@ -60,7 +60,8 @@ namespace LoanCalculator.Pages
                     Duration = this.Duration
                 };
 
-                var serializedMortgageModel = JsonConvert.SerializeObject(mortgageModel);
+                MortgageSerializer mortgageSerializer = new MortgageSerializer();
+                var serializedMortgageModel = mortgageSerializer.Serialize(mortgageModel);
                 queue.AddMessageAsync(new CloudQueueMessage(serializedMortgageModel));
 
                 Message = $"Input data has been submitted for processing";

@@ -14,7 +14,7 @@ namespace UnitTestProject
 
             monthlypayment = Math.Round(monthlypayment, 2);
 
-            Assert.AreEqual(monthlypayment, 62.81);
+            Assert.AreEqual(monthlypayment, 40.19);
         }
     }
 }
