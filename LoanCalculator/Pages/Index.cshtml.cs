@@ -6,12 +6,14 @@ using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Queue;
 using MortgageHelperClassLibrary;
 using Newtonsoft.Json;
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace LoanCalculator.Pages
 {
     public class IndexModel : PageModel
     {
+        public string Id { get; private set; }
         public string Message { get; private set; }
         private readonly ILogger<IndexModel> _logger;
         private readonly IConfiguration Configuration;
@@ -53,8 +55,11 @@ namespace LoanCalculator.Pages
                 CloudQueueClient queueClient = storageAccount.CreateCloudQueueClient();
                 CloudQueue queue = queueClient.GetQueueReference("itmd419519queue");
 
+                Id = Guid.NewGuid().ToString();
+
                 MortgageModel mortgageModel = new MortgageModel
                 {
+                    Id = this.Id,
                     Principal = this.Principal,
                     Interest = this.Interest,
                     Duration = this.Duration

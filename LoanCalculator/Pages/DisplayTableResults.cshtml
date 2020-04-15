@@ -1,0 +1,20 @@
+﻿@page
+@model LoanCalculator.Pages.DisplayTableResultsModel
+@{
+    ViewData["Title"] = "DisplayTableResults";
+}
+
+<h2>DisplayTableResults</h2>
+@{ if (DisplayTableResultsModel.MortgageTableEntryDetails != null)
+    {
+        <p><span>Principal:</span>@DisplayTableResultsModel.MortgageTableEntryDetails.Principal</p>
+        <p><span>Interest:</span>@DisplayTableResultsModel.MortgageTableEntryDetails.Interest</p>
+        <p><span>Duration:</span>@DisplayTableResultsModel.MortgageTableEntryDetails.Duration</p>
+        <p><span>Monthly Payment:</span>@DisplayTableResultsModel.MortgageTableEntryDetails.MotnhlyPayment</p>
+    }
+    else
+    {
+        <br />
+        <p><strong>There is no result yet. Refresh the page</strong></p>
+    }
+}

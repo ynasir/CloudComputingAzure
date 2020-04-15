@@ -46,6 +46,7 @@ namespace WebJobsSDKSample
 
             TableEntity tableEntity = new MortgageTableEntry(cloudTable.Name, DateTime.Now.Ticks.ToString())
             {
+                Id = new Guid(data.Id),
                 Principal = Convert.ToDouble(data.Principal),
                 Interest = Convert.ToDouble(data.Interest),
                 Duration = Convert.ToDouble(data.Duration),
